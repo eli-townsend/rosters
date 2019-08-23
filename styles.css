@@ -1,0 +1,74 @@
+/*
+Color Palette
+#61f2f5 - light blue
+#ffffff - white
+#e0e0e0 - grey
+#723881 - purple
+*/
+
+.user-container {
+  display: inline-block;
+  margin: 10px 15px;
+  padding: 5px;
+  border: 1px solid #e0e0e0;
+}
+
+.rendered-container{
+  display: inline-block;
+  width: 25%;
+}
+
+.display--none {
+  display: none;
+}
+
+#validate-button {
+  margin-top: 25px;
+}
+
+section {
+  width: 100%;
+  padding: 2% 7%;
+  display: table;
+  margin: 0;
+  max-width: none;
+  background-color: #FFF;
+  min-height: 100vh;
+}
+
+section:nth-of-type(2n) {
+  background-color: #61f2f5;
+}
+
+.team-tile {
+  display: inline-block;
+  margin: 10px 15px;
+  padding: 5px;
+  border: 1px solid #723881;
+  min-height: 150px;
+  text-align: center;
+}
+
+.team-title {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.team-tile > ul > li {
+  text-align: left;
+}
+
+.keeper-text {
+  font-size: 12px;
+  font-weight: 200;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #723881;
+  border: 0;
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+  border: 0;
+}
