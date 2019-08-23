@@ -1,0 +1,11 @@
+var byeWeeks = {
+"Week 4" :	"New York Jets, San Francsico 49ers",
+"Week 5" :	"Miami Dolphins, Detroit Lions",
+"Week 6" :	"Buffalo Bills, Chicago Bears, Indianapolis Colts, Oakland Raiders",
+"Week 7" :	"Carolina Panthers, Cleveland Browns, Tampa Bay Buccaneers, Pittsburgh Steelers",
+"Week 8" :	"Dallas Cowboys, Baltimore Ravens",
+"Week 9" :	"Cincinnati Bengals, Atlanta Falcons, Los Angeles Rams, New Orleans Saints",
+"Week 10" :	"Denver Broncos, Jacksonville Jaguars, Houston Texans, New England Patriots, Philadelphia Eagles, Washington Redskins",
+"Week 11" :	"New York Giants, Green Bay Packers, Seattle Seahawks, Tennessee Titans",
+"Week 12" :	"Kansas City Chiefs, Los Angeles Chargers, Arizona Cardinals, Minnesota Vikings"
+}
