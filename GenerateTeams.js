@@ -57,14 +57,14 @@ GenerateTeams = {
     template = 
     `<div class="user-container">
     <div class="form-group">
-      <label>Team Name</label>
+      <label for="team-input-${generatedNumber}">Team Name</label>
 
-      <input type="text" class="form-control team-name-input" >
+      <input id="team-input-${generatedNumber}" type="text" class="form-control team-name-input">
     </div>
     
-    <label>Keeper</label>
+    <label for="team-select-${generatedNumber}">Keeper</label>
 
-    <select class="nfl-team__select custom-select" name="nfl-team-dropdown"><option value="none">None</option><option value="Arizona">Arizona</option><option value="Atlanta">Atlanta</option><option value="Baltimore">Baltimore</option><option value="Buffalo">Buffalo</option><option value="Carolina">Carolina</option><option value="Chicago">Chicago</option><option value="Cincinnati">Cincinnati</option><option value="Cleveland">Cleveland</option><option value="Dallas">Dallas</option><option value="Denver">Denver</option><option value="Detroit">Detroit</option><option value="Green Bay">Green Bay</option><option value="Houston">Houston</option><option value="Indianapolis">Indianapolis</option><option value="Jacksonville">Jacksonville</option><option value="Kansas City">Kansas City</option><option value="LA Rams">LA Rams</option><option value="LA Chargers">LA Chargers</option><option value="Miami">Miami</option><option value="Minnesota">Minnesota</option><option value="New England">New England</option><option value="New Orleans">New Orleans</option><option value="NY Jets">NY Jets</option><option value="NY Giants">NY Giants</option><option value="Oakland">Oakland</option><option value="Philadelphia">Philadelphia</option><option value="Pittsburgh">Pittsburgh</option><option value="San Francisco">San Francisco</option><option value="Seattle">Seattle</option><option value="Tampa Bay">Tampa Bay</option><option value="Tennessee">Tennessee</option><option value="Washington">Washington</option></select>
+    <select id="team-select-${generatedNumber}" class="nfl-team__select custom-select" name="nfl-team-dropdown"><option value="none">None</option><option value="Arizona">Arizona</option><option value="Atlanta">Atlanta</option><option value="Baltimore">Baltimore</option><option value="Buffalo">Buffalo</option><option value="Carolina">Carolina</option><option value="Chicago">Chicago</option><option value="Cincinnati">Cincinnati</option><option value="Cleveland">Cleveland</option><option value="Dallas">Dallas</option><option value="Denver">Denver</option><option value="Detroit">Detroit</option><option value="Green Bay">Green Bay</option><option value="Houston">Houston</option><option value="Indianapolis">Indianapolis</option><option value="Jacksonville">Jacksonville</option><option value="Kansas City">Kansas City</option><option value="LA Rams">LA Rams</option><option value="LA Chargers">LA Chargers</option><option value="Miami">Miami</option><option value="Minnesota">Minnesota</option><option value="New England">New England</option><option value="New Orleans">New Orleans</option><option value="NY Jets">NY Jets</option><option value="NY Giants">NY Giants</option><option value="Oakland">Oakland</option><option value="Philadelphia">Philadelphia</option><option value="Pittsburgh">Pittsburgh</option><option value="San Francisco">San Francisco</option><option value="Seattle">Seattle</option><option value="Tampa Bay">Tampa Bay</option><option value="Tennessee">Tennessee</option><option value="Washington">Washington</option></select>
   </div>`;
 
     return template;

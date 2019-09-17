@@ -18,7 +18,7 @@ body {
   width: 100%;
 }
 
-.navbar-light .navbar-brand  {
+.navbar-light .navbar-brand , h1 {
   color: #50B6BB;
   font-size: 2em;
   font-family: 'Josefin Sans', sans-serif;
@@ -126,12 +126,6 @@ section {
 }
 
 .btn-secondary:hover, .btn-secondary:focus {
-  border: 0;
-}
-
-.btn-dark {
-  background: #50B6BB;
-  color: #F8F8F8;
   border: 0;
 }
 
