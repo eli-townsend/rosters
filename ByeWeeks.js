@@ -33,7 +33,7 @@ ByeWeeks = {
 
     var today = new Date();
     var weekno = today.getWeek();
-
+console.log(weekno);
     return weekno;
   },
 

@@ -73,8 +73,6 @@ RenderTeams = {
     if( $keeperValue !== 'none' ){         
       denim.keeper = true;
 
-      $( '.keeper-text' ).show();
-
       denim.teamOne = $keeperValue;
 
       for( var i = 0; i < $nflArray.length; i++ ){ 
@@ -82,6 +80,9 @@ RenderTeams = {
           $nflArray.splice( i, 1 ); 
         }
       }
+
+      $( '.potential-keeper' ).find( '.keeper-text' ).removeClass( '.keeper-text' );
+      $( '.potential-keeper' ).find( '.keeper-text' ).addClass( '.keeper-text__show' );
 
       denim.teamTwo = RenderTeams.randomArray();
 
@@ -110,7 +111,7 @@ RenderTeams = {
         </div>
       </div>`;
 
-      $( '#renderedTeams' ).prepend(renderTemplate);
+      $( '#results-title' ).after(renderTemplate);
   },
 
   printPage: function() {

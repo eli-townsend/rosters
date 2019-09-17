@@ -1,116 +1,120 @@
 <!doctype html>
 <html>
   <head>
-    <title>Full Team Fantasy Football</title>
+    <title>Roster's - Full Team Fantasy Football</title>
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" 
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   
   <body>
-    <div id="main-nav" class="nav justify-content-center">
-      <h1 class="main-nav-title">Roster's</h1>
-      <h1 class="main-nav-title__subtitle"> Full Team Fantasy Football</h1>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Roster's</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">League</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Account</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="collapse navbar-collapse justify-content-end">
+        <button id="generate-teams" class="btn btn-secondary">Add Team</button>
+      </div>
+    </nav>
 
     <section id="landing">
       <p>Welcome to Roster’s full team fantasy football. Start by creating your franchise teams, maximum
           of ten teams.</p>
 
-      <div class="container">
-        <div class="row">
-          <div class="col-sm">
-            <button id="generate-teams" class="btn btn-secondary">Add Team</button>
-          </div>
-
-          <div class="col-sm">
-            <h6>Teams On Bye Week</h6>
-
-            <div id="byeTeams"></div>
-          </div>
-        </div>
+      <div class="bye-container">
+        <span>Bye Week Teams: <div id="byeTeams"></div></span>
       </div>
 
       <form id="team-selection">
         <div class="league-container">
           <div class="user-container">
-            <span class="input input--jiro">
-              <input class="input__field input__field--jiro team-name-input" type="text" id="input-10" />
-              <label class="input__label input__label--jiro" for="input-10">
-                <span class="input__label-content input__label-content--jiro">Team Name</span>
-              </label>
-            </span>
-            <br/><br/>
-            <label>Keeper
-              <select class="nfl-team__select" name="nfl-team-dropdown"><option value="none">None</option><option value="Arizona">Arizona</option><option value="Atlanta">Atlanta</option><option value="Baltimore">Baltimore</option><option value="Buffalo">Buffalo</option><option value="Carolina">Carolina</option><option value="Chicago">Chicago</option><option value="Cincinnati">Cincinnati</option><option value="Cleveland">Cleveland</option><option value="Dallas">Dallas</option><option value="Denver">Denver</option><option value="Detroit">Detroit</option><option value="Green Bay">Green Bay</option><option value="Houston">Houston</option><option value="Indianapolis">Indianapolis</option><option value="Jacksonville">Jacksonville</option><option value="Kansas City">Kansas City</option><option value="LA Rams">LA Rams</option><option value="LA Chargers">LA Chargers</option><option value="Miami">Miami</option><option value="Minnesota">Minnesota</option><option value="New England">New England</option><option value="New Orleans">New Orleans</option><option value="NY Jets">NY Jets</option><option value="NY Giants">NY Giants</option><option value="Oakland">Oakland</option><option value="Philadelphia">Philadelphia</option><option value="Pittsburgh">Pittsburgh</option><option value="San Francisco">San Francisco</option><option value="Seattle">Seattle</option><option value="Tampa Bay">Tampa Bay</option><option value="Tennessee">Tennessee</option><option value="Washington">Washington</option></select>
-            </label>
+            <div class="form-group">
+              <label>Team Name</label>
+
+              <input type="text" class="form-control team-name-input" >
+            </div>
+            
+            <label>Keeper</label>
+
+            <select class="nfl-team__select custom-select" name="nfl-team-dropdown"><option value="none">None</option><option value="Arizona">Arizona</option><option value="Atlanta">Atlanta</option><option value="Baltimore">Baltimore</option><option value="Buffalo">Buffalo</option><option value="Carolina">Carolina</option><option value="Chicago">Chicago</option><option value="Cincinnati">Cincinnati</option><option value="Cleveland">Cleveland</option><option value="Dallas">Dallas</option><option value="Denver">Denver</option><option value="Detroit">Detroit</option><option value="Green Bay">Green Bay</option><option value="Houston">Houston</option><option value="Indianapolis">Indianapolis</option><option value="Jacksonville">Jacksonville</option><option value="Kansas City">Kansas City</option><option value="LA Rams">LA Rams</option><option value="LA Chargers">LA Chargers</option><option value="Miami">Miami</option><option value="Minnesota">Minnesota</option><option value="New England">New England</option><option value="New Orleans">New Orleans</option><option value="NY Jets">NY Jets</option><option value="NY Giants">NY Giants</option><option value="Oakland">Oakland</option><option value="Philadelphia">Philadelphia</option><option value="Pittsburgh">Pittsburgh</option><option value="San Francisco">San Francisco</option><option value="Seattle">Seattle</option><option value="Tampa Bay">Tampa Bay</option><option value="Tennessee">Tennessee</option><option value="Washington">Washington</option></select>
           </div>
 
           <div class="user-container">
-            <span class="input input--jiro">
-              <input class="input__field input__field--jiro team-name-input" type="text" id="input-11" />
-              <label class="input__label input__label--jiro" for="input-11">
-                <span class="input__label-content input__label-content--jiro">Team Name</span>
-              </label>
-            </span>
-            <br/><br/>
-            <label>Keeper
-              <select class="nfl-team__select" name="nfl-team-dropdown"><option value="none">None</option><option value="Arizona">Arizona</option><option value="Atlanta">Atlanta</option><option value="Baltimore">Baltimore</option><option value="Buffalo">Buffalo</option><option value="Carolina">Carolina</option><option value="Chicago">Chicago</option><option value="Cincinnati">Cincinnati</option><option value="Cleveland">Cleveland</option><option value="Dallas">Dallas</option><option value="Denver">Denver</option><option value="Detroit">Detroit</option><option value="Green Bay">Green Bay</option><option value="Houston">Houston</option><option value="Indianapolis">Indianapolis</option><option value="Jacksonville">Jacksonville</option><option value="Kansas City">Kansas City</option><option value="LA Rams">LA Rams</option><option value="LA Chargers">LA Chargers</option><option value="Miami">Miami</option><option value="Minnesota">Minnesota</option><option value="New England">New England</option><option value="New Orleans">New Orleans</option><option value="NY Jets">NY Jets</option><option value="NY Giants">NY Giants</option><option value="Oakland">Oakland</option><option value="Philadelphia">Philadelphia</option><option value="Pittsburgh">Pittsburgh</option><option value="San Francisco">San Francisco</option><option value="Seattle">Seattle</option><option value="Tampa Bay">Tampa Bay</option><option value="Tennessee">Tennessee</option><option value="Washington">Washington</option></select>
-            </label>
+            <div class="form-group">
+              <label>Team Name</label>
+
+              <input type="text" class="form-control team-name-input" >
+            </div>
+            
+            <label>Keeper</label>
+
+            <select class="nfl-team__select custom-select" name="nfl-team-dropdown"><option value="none">None</option><option value="Arizona">Arizona</option><option value="Atlanta">Atlanta</option><option value="Baltimore">Baltimore</option><option value="Buffalo">Buffalo</option><option value="Carolina">Carolina</option><option value="Chicago">Chicago</option><option value="Cincinnati">Cincinnati</option><option value="Cleveland">Cleveland</option><option value="Dallas">Dallas</option><option value="Denver">Denver</option><option value="Detroit">Detroit</option><option value="Green Bay">Green Bay</option><option value="Houston">Houston</option><option value="Indianapolis">Indianapolis</option><option value="Jacksonville">Jacksonville</option><option value="Kansas City">Kansas City</option><option value="LA Rams">LA Rams</option><option value="LA Chargers">LA Chargers</option><option value="Miami">Miami</option><option value="Minnesota">Minnesota</option><option value="New England">New England</option><option value="New Orleans">New Orleans</option><option value="NY Jets">NY Jets</option><option value="NY Giants">NY Giants</option><option value="Oakland">Oakland</option><option value="Philadelphia">Philadelphia</option><option value="Pittsburgh">Pittsburgh</option><option value="San Francisco">San Francisco</option><option value="Seattle">Seattle</option><option value="Tampa Bay">Tampa Bay</option><option value="Tennessee">Tennessee</option><option value="Washington">Washington</option></select>
           </div>
 
           <div class="user-container">
-            <span class="input input--jiro">
-              <input class="input__field input__field--jiro team-name-input" type="text" id="input-12" />
-              <label class="input__label input__label--jiro" for="input-12">
-                <span class="input__label-content input__label-content--jiro">Team Name</span>
-              </label>
-            </span>
-            <br/><br/>
-            <label>Keeper
-              <select class="nfl-team__select" name="nfl-team-dropdown"><option value="none">None</option><option value="Arizona">Arizona</option><option value="Atlanta">Atlanta</option><option value="Baltimore">Baltimore</option><option value="Buffalo">Buffalo</option><option value="Carolina">Carolina</option><option value="Chicago">Chicago</option><option value="Cincinnati">Cincinnati</option><option value="Cleveland">Cleveland</option><option value="Dallas">Dallas</option><option value="Denver">Denver</option><option value="Detroit">Detroit</option><option value="Green Bay">Green Bay</option><option value="Houston">Houston</option><option value="Indianapolis">Indianapolis</option><option value="Jacksonville">Jacksonville</option><option value="Kansas City">Kansas City</option><option value="LA Rams">LA Rams</option><option value="LA Chargers">LA Chargers</option><option value="Miami">Miami</option><option value="Minnesota">Minnesota</option><option value="New England">New England</option><option value="New Orleans">New Orleans</option><option value="NY Jets">NY Jets</option><option value="NY Giants">NY Giants</option><option value="Oakland">Oakland</option><option value="Philadelphia">Philadelphia</option><option value="Pittsburgh">Pittsburgh</option><option value="San Francisco">San Francisco</option><option value="Seattle">Seattle</option><option value="Tampa Bay">Tampa Bay</option><option value="Tennessee">Tennessee</option><option value="Washington">Washington</option></select>
-            </label>
+            <div class="form-group">
+              <label>Team Name</label>
+
+              <input type="text" class="form-control team-name-input" >
+            </div>
+            
+            <label>Keeper</label>
+
+            <select class="nfl-team__select custom-select" name="nfl-team-dropdown"><option value="none">None</option><option value="Arizona">Arizona</option><option value="Atlanta">Atlanta</option><option value="Baltimore">Baltimore</option><option value="Buffalo">Buffalo</option><option value="Carolina">Carolina</option><option value="Chicago">Chicago</option><option value="Cincinnati">Cincinnati</option><option value="Cleveland">Cleveland</option><option value="Dallas">Dallas</option><option value="Denver">Denver</option><option value="Detroit">Detroit</option><option value="Green Bay">Green Bay</option><option value="Houston">Houston</option><option value="Indianapolis">Indianapolis</option><option value="Jacksonville">Jacksonville</option><option value="Kansas City">Kansas City</option><option value="LA Rams">LA Rams</option><option value="LA Chargers">LA Chargers</option><option value="Miami">Miami</option><option value="Minnesota">Minnesota</option><option value="New England">New England</option><option value="New Orleans">New Orleans</option><option value="NY Jets">NY Jets</option><option value="NY Giants">NY Giants</option><option value="Oakland">Oakland</option><option value="Philadelphia">Philadelphia</option><option value="Pittsburgh">Pittsburgh</option><option value="San Francisco">San Francisco</option><option value="Seattle">Seattle</option><option value="Tampa Bay">Tampa Bay</option><option value="Tennessee">Tennessee</option><option value="Washington">Washington</option></select>
           </div>
 
           <div class="user-container">
-            <span class="input input--jiro">
-              <input class="input__field input__field--jiro team-name-input" type="text" id="input-13" />
-              <label class="input__label input__label--jiro" for="input-13">
-                <span class="input__label-content input__label-content--jiro">Team Name</span>
-              </label>
-            </span>
-            <br/><br/>
-            <label>Keeper
-              <select class="nfl-team__select" name="nfl-team-dropdown"><option value="none">None</option><option value="Arizona">Arizona</option><option value="Atlanta">Atlanta</option><option value="Baltimore">Baltimore</option><option value="Buffalo">Buffalo</option><option value="Carolina">Carolina</option><option value="Chicago">Chicago</option><option value="Cincinnati">Cincinnati</option><option value="Cleveland">Cleveland</option><option value="Dallas">Dallas</option><option value="Denver">Denver</option><option value="Detroit">Detroit</option><option value="Green Bay">Green Bay</option><option value="Houston">Houston</option><option value="Indianapolis">Indianapolis</option><option value="Jacksonville">Jacksonville</option><option value="Kansas City">Kansas City</option><option value="LA Rams">LA Rams</option><option value="LA Chargers">LA Chargers</option><option value="Miami">Miami</option><option value="Minnesota">Minnesota</option><option value="New England">New England</option><option value="New Orleans">New Orleans</option><option value="NY Jets">NY Jets</option><option value="NY Giants">NY Giants</option><option value="Oakland">Oakland</option><option value="Philadelphia">Philadelphia</option><option value="Pittsburgh">Pittsburgh</option><option value="San Francisco">San Francisco</option><option value="Seattle">Seattle</option><option value="Tampa Bay">Tampa Bay</option><option value="Tennessee">Tennessee</option><option value="Washington">Washington</option></select>
-            </label>
+            <div class="form-group">
+              <label>Team Name</label>
+
+              <input type="text" class="form-control team-name-input" >
+            </div>
+            
+            <label>Keeper</label>
+
+            <select class="nfl-team__select custom-select" name="nfl-team-dropdown"><option value="none">None</option><option value="Arizona">Arizona</option><option value="Atlanta">Atlanta</option><option value="Baltimore">Baltimore</option><option value="Buffalo">Buffalo</option><option value="Carolina">Carolina</option><option value="Chicago">Chicago</option><option value="Cincinnati">Cincinnati</option><option value="Cleveland">Cleveland</option><option value="Dallas">Dallas</option><option value="Denver">Denver</option><option value="Detroit">Detroit</option><option value="Green Bay">Green Bay</option><option value="Houston">Houston</option><option value="Indianapolis">Indianapolis</option><option value="Jacksonville">Jacksonville</option><option value="Kansas City">Kansas City</option><option value="LA Rams">LA Rams</option><option value="LA Chargers">LA Chargers</option><option value="Miami">Miami</option><option value="Minnesota">Minnesota</option><option value="New England">New England</option><option value="New Orleans">New Orleans</option><option value="NY Jets">NY Jets</option><option value="NY Giants">NY Giants</option><option value="Oakland">Oakland</option><option value="Philadelphia">Philadelphia</option><option value="Pittsburgh">Pittsburgh</option><option value="San Francisco">San Francisco</option><option value="Seattle">Seattle</option><option value="Tampa Bay">Tampa Bay</option><option value="Tennessee">Tennessee</option><option value="Washington">Washington</option></select>
           </div>
 
           <div class="user-container">
-            <span class="input input--jiro">
-              <input class="input__field input__field--jiro team-name-input" type="text" id="input-14" />
-              <label class="input__label input__label--jiro" for="input-14">
-                <span class="input__label-content input__label-content--jiro">Team Name</span>
-              </label>
-            </span>
-            <br/><br/>
-            <label>Keeper
-              <select class="nfl-team__select" name="nfl-team-dropdown"><option value="none">None</option><option value="Arizona">Arizona</option><option value="Atlanta">Atlanta</option><option value="Baltimore">Baltimore</option><option value="Buffalo">Buffalo</option><option value="Carolina">Carolina</option><option value="Chicago">Chicago</option><option value="Cincinnati">Cincinnati</option><option value="Cleveland">Cleveland</option><option value="Dallas">Dallas</option><option value="Denver">Denver</option><option value="Detroit">Detroit</option><option value="Green Bay">Green Bay</option><option value="Houston">Houston</option><option value="Indianapolis">Indianapolis</option><option value="Jacksonville">Jacksonville</option><option value="Kansas City">Kansas City</option><option value="LA Rams">LA Rams</option><option value="LA Chargers">LA Chargers</option><option value="Miami">Miami</option><option value="Minnesota">Minnesota</option><option value="New England">New England</option><option value="New Orleans">New Orleans</option><option value="NY Jets">NY Jets</option><option value="NY Giants">NY Giants</option><option value="Oakland">Oakland</option><option value="Philadelphia">Philadelphia</option><option value="Pittsburgh">Pittsburgh</option><option value="San Francisco">San Francisco</option><option value="Seattle">Seattle</option><option value="Tampa Bay">Tampa Bay</option><option value="Tennessee">Tennessee</option><option value="Washington">Washington</option></select>
-            </label>
+            <div class="form-group">
+              <label>Team Name</label>
+
+              <input type="text" class="form-control team-name-input" >
+            </div>
+
+            <label>Keeper</label>
+
+            <select class="nfl-team__select custom-select" name="nfl-team-dropdown"><option value="none">None</option><option value="Arizona">Arizona</option><option value="Atlanta">Atlanta</option><option value="Baltimore">Baltimore</option><option value="Buffalo">Buffalo</option><option value="Carolina">Carolina</option><option value="Chicago">Chicago</option><option value="Cincinnati">Cincinnati</option><option value="Cleveland">Cleveland</option><option value="Dallas">Dallas</option><option value="Denver">Denver</option><option value="Detroit">Detroit</option><option value="Green Bay">Green Bay</option><option value="Houston">Houston</option><option value="Indianapolis">Indianapolis</option><option value="Jacksonville">Jacksonville</option><option value="Kansas City">Kansas City</option><option value="LA Rams">LA Rams</option><option value="LA Chargers">LA Chargers</option><option value="Miami">Miami</option><option value="Minnesota">Minnesota</option><option value="New England">New England</option><option value="New Orleans">New Orleans</option><option value="NY Jets">NY Jets</option><option value="NY Giants">NY Giants</option><option value="Oakland">Oakland</option><option value="Philadelphia">Philadelphia</option><option value="Pittsburgh">Pittsburgh</option><option value="San Francisco">San Francisco</option><option value="Seattle">Seattle</option><option value="Tampa Bay">Tampa Bay</option><option value="Tennessee">Tennessee</option><option value="Washington">Washington</option></select>
           </div>
 
           <div class="user-container">
-            <span class="input input--jiro">
-              <input class="input__field input__field--jiro team-name-input" type="text" id="input-15" />
-              <label class="input__label input__label--jiro" for="input-15">
-                <span class="input__label-content input__label-content--jiro">Team Name</span>
-              </label>
-            </span>
-            <br/><br/>
-            <label>Keeper
-              <select class="nfl-team__select" name="nfl-team-dropdown"><option value="none">None</option><option value="Arizona">Arizona</option><option value="Atlanta">Atlanta</option><option value="Baltimore">Baltimore</option><option value="Buffalo">Buffalo</option><option value="Carolina">Carolina</option><option value="Chicago">Chicago</option><option value="Cincinnati">Cincinnati</option><option value="Cleveland">Cleveland</option><option value="Dallas">Dallas</option><option value="Denver">Denver</option><option value="Detroit">Detroit</option><option value="Green Bay">Green Bay</option><option value="Houston">Houston</option><option value="Indianapolis">Indianapolis</option><option value="Jacksonville">Jacksonville</option><option value="Kansas City">Kansas City</option><option value="LA Rams">LA Rams</option><option value="LA Chargers">LA Chargers</option><option value="Miami">Miami</option><option value="Minnesota">Minnesota</option><option value="New England">New England</option><option value="New Orleans">New Orleans</option><option value="NY Jets">NY Jets</option><option value="NY Giants">NY Giants</option><option value="Oakland">Oakland</option><option value="Philadelphia">Philadelphia</option><option value="Pittsburgh">Pittsburgh</option><option value="San Francisco">San Francisco</option><option value="Seattle">Seattle</option><option value="Tampa Bay">Tampa Bay</option><option value="Tennessee">Tennessee</option><option value="Washington">Washington</option></select>
-            </label>
+            <div class="form-group">
+              <label>Team Name</label>
+
+              <input type="text" class="form-control team-name-input" >
+            </div>
+
+            <label>Keeper</label>
+
+            <select class="nfl-team__select custom-select" name="nfl-team-dropdown"><option value="none">None</option><option value="Arizona">Arizona</option><option value="Atlanta">Atlanta</option><option value="Baltimore">Baltimore</option><option value="Buffalo">Buffalo</option><option value="Carolina">Carolina</option><option value="Chicago">Chicago</option><option value="Cincinnati">Cincinnati</option><option value="Cleveland">Cleveland</option><option value="Dallas">Dallas</option><option value="Denver">Denver</option><option value="Detroit">Detroit</option><option value="Green Bay">Green Bay</option><option value="Houston">Houston</option><option value="Indianapolis">Indianapolis</option><option value="Jacksonville">Jacksonville</option><option value="Kansas City">Kansas City</option><option value="LA Rams">LA Rams</option><option value="LA Chargers">LA Chargers</option><option value="Miami">Miami</option><option value="Minnesota">Minnesota</option><option value="New England">New England</option><option value="New Orleans">New Orleans</option><option value="NY Jets">NY Jets</option><option value="NY Giants">NY Giants</option><option value="Oakland">Oakland</option><option value="Philadelphia">Philadelphia</option><option value="Pittsburgh">Pittsburgh</option><option value="San Francisco">San Francisco</option><option value="Seattle">Seattle</option><option value="Tampa Bay">Tampa Bay</option><option value="Tennessee">Tennessee</option><option value="Washington">Washington</option></select>
           </div>
         </div>
       </form>
@@ -119,48 +123,22 @@
     </section>
 
     <section id="renderedTeams">
-      <button id="print-button" class="btn btn-secondary btn-lg">Print Results</button>
-      <button type="button" class="btn btn-primary btn-lg">Start Over</button>
+      <h1 id="results-title">Results</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+              <button id="print-button" class="btn btn-secondary btn-lg btn-block">Print Results</button>
+          </div>
+
+          <div class="col-sm">
+              <button id="start-over" class="btn btn-secondary btn-lg btn-block">Start Over</button>
+          </div>
+        </div>
+      </div>
     </section>
    
     <script src="GenerateTeams.js"></script>
     <script src="RenderTeams.js"></script>
     <script src="ByeWeeks.js"></script>
-    <script src="classie.js"></script>
-    <script>
-	(function() {
-	// trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
-	if (!String.prototype.trim) {
-		(function() {
-			// Make sure we trim BOM and NBSP
-			var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
-			String.prototype.trim = function() {
-				return this.replace(rtrim, '');
-			};
-		})();
-	}
-
-	[].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
-		// in case the input is already filled..
-		if( inputEl.value.trim() !== '' ) {
-			classie.add( inputEl.parentNode, 'input--filled' );
-		}
-
-		// events:
-		inputEl.addEventListener( 'focus', onInputFocus );
-		inputEl.addEventListener( 'blur', onInputBlur );
-	} );
-
-	function onInputFocus( ev ) {
-		classie.add( ev.target.parentNode, 'input--filled' );
-	}
-
-	function onInputBlur( ev ) {
-		if( ev.target.value.trim() === '' ) {
-			classie.remove( ev.target.parentNode, 'input--filled' );
-		}
-	}
-	})();
-   </script>
   </body>
 </html>
