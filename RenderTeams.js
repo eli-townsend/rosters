@@ -1,5 +1,5 @@
 RenderTeams = {
-	init: function() {
+  init: function() {
     this.cacheDom();
     this.bindEvents();
   },
@@ -24,13 +24,6 @@ RenderTeams = {
         RenderTeams.objectLit( $(this) );
       });
   
-    });
-
-    $( document ).on( 'click', '.delete-team', function(e) {
-      const $thisTarget = $( this ).closest( '.user-container' );
-      e.preventDefault();
-
-      $thisTarget.addClass( 'is-selected' );
     });
 
     this.Cache.$printresults.on( 'click', RenderTeams.printPage );
@@ -70,7 +63,7 @@ RenderTeams = {
     
     denim.team = $teamName;
       
-    if( $keeperValue !== 'none' ){         
+    if( $keeperValue !== 'none' ){
       denim.keeper = true;
 
       denim.teamOne = $keeperValue;
@@ -102,9 +95,9 @@ RenderTeams = {
     renderTemplate = 
       `<div class="rendered-container">
         <div class="team-tile">
-          <label class="team-title">${denim.team}</label>
+          <label class="team-title">Team ${denim.team}</label>
           <ul>
-            <li>Team 1:<div class="potential-keeper">${denim.teamOne} <span class="keeper-text">(Keeper)</span></div></li>
+            <li>Team 1: ${denim.teamOne}</li>
             <li>Team 2: ${denim.teamTwo}</li>
             <li>Team 3: ${denim.teamThree}</li>
           </ul>
