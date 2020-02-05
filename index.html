@@ -31,7 +31,7 @@
       </div>
 
       <div class="collapse navbar-collapse justify-content-end">
-        <button id="generate-teams" class="btn btn-secondary">Add Team</button>
+        <button id="add-team-button" class="btn btn-secondary">Add Team</button>
       </div>
     </nav>
 
@@ -41,6 +41,23 @@
 
       <div class="bye-container">
         <span>Bye Week Teams: <div id="byeTeams"></div></span>
+      </div>
+
+      <!-- ERRORS -->
+      <div id="multiple-teams" class="alert alert-warning fade invisible" role="alert">
+        Please select a different team, you cannot have a team selected twice as a keeper.
+
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div id="add-more-teams" class="alert alert-warning fade invisible" role="alert">
+        Please add more teams, minimum of six teams to plat
+
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
 
       <form id="team-selection">
@@ -55,6 +72,10 @@
             <label for="team-select-1">Keeper</label>
 
             <select id="team-select-1" class="nfl-team__select custom-select" name="nfl-team-dropdown"><option value="none">None</option><option value="Arizona">Arizona</option><option value="Atlanta">Atlanta</option><option value="Baltimore">Baltimore</option><option value="Buffalo">Buffalo</option><option value="Carolina">Carolina</option><option value="Chicago">Chicago</option><option value="Cincinnati">Cincinnati</option><option value="Cleveland">Cleveland</option><option value="Dallas">Dallas</option><option value="Denver">Denver</option><option value="Detroit">Detroit</option><option value="Green Bay">Green Bay</option><option value="Houston">Houston</option><option value="Indianapolis">Indianapolis</option><option value="Jacksonville">Jacksonville</option><option value="Kansas City">Kansas City</option><option value="LA Rams">LA Rams</option><option value="LA Chargers">LA Chargers</option><option value="Miami">Miami</option><option value="Minnesota">Minnesota</option><option value="New England">New England</option><option value="New Orleans">New Orleans</option><option value="NY Jets">NY Jets</option><option value="NY Giants">NY Giants</option><option value="Oakland">Oakland</option><option value="Philadelphia">Philadelphia</option><option value="Pittsburgh">Pittsburgh</option><option value="San Francisco">San Francisco</option><option value="Seattle">Seattle</option><option value="Tampa Bay">Tampa Bay</option><option value="Tennessee">Tennessee</option><option value="Washington">Washington</option></select>
+
+            <br/>
+            
+            <button class="btn btn-link delete-team">Delete Team</button>
           </div>
 
           <div class="user-container">
@@ -67,6 +88,10 @@
             <label for="team-select-2">Keeper</label>
 
             <select id="team-select-2" class="nfl-team__select custom-select" name="nfl-team-dropdown"><option value="none">None</option><option value="Arizona">Arizona</option><option value="Atlanta">Atlanta</option><option value="Baltimore">Baltimore</option><option value="Buffalo">Buffalo</option><option value="Carolina">Carolina</option><option value="Chicago">Chicago</option><option value="Cincinnati">Cincinnati</option><option value="Cleveland">Cleveland</option><option value="Dallas">Dallas</option><option value="Denver">Denver</option><option value="Detroit">Detroit</option><option value="Green Bay">Green Bay</option><option value="Houston">Houston</option><option value="Indianapolis">Indianapolis</option><option value="Jacksonville">Jacksonville</option><option value="Kansas City">Kansas City</option><option value="LA Rams">LA Rams</option><option value="LA Chargers">LA Chargers</option><option value="Miami">Miami</option><option value="Minnesota">Minnesota</option><option value="New England">New England</option><option value="New Orleans">New Orleans</option><option value="NY Jets">NY Jets</option><option value="NY Giants">NY Giants</option><option value="Oakland">Oakland</option><option value="Philadelphia">Philadelphia</option><option value="Pittsburgh">Pittsburgh</option><option value="San Francisco">San Francisco</option><option value="Seattle">Seattle</option><option value="Tampa Bay">Tampa Bay</option><option value="Tennessee">Tennessee</option><option value="Washington">Washington</option></select>
+
+            <br/>
+            
+            <button class="btn btn-link delete-team">Delete Team</button>
           </div>
 
           <div class="user-container">
@@ -79,6 +104,10 @@
             <label for="team-select-3">Keeper</label>
 
             <select id="team-select-3" class="nfl-team__select custom-select" name="nfl-team-dropdown"><option value="none">None</option><option value="Arizona">Arizona</option><option value="Atlanta">Atlanta</option><option value="Baltimore">Baltimore</option><option value="Buffalo">Buffalo</option><option value="Carolina">Carolina</option><option value="Chicago">Chicago</option><option value="Cincinnati">Cincinnati</option><option value="Cleveland">Cleveland</option><option value="Dallas">Dallas</option><option value="Denver">Denver</option><option value="Detroit">Detroit</option><option value="Green Bay">Green Bay</option><option value="Houston">Houston</option><option value="Indianapolis">Indianapolis</option><option value="Jacksonville">Jacksonville</option><option value="Kansas City">Kansas City</option><option value="LA Rams">LA Rams</option><option value="LA Chargers">LA Chargers</option><option value="Miami">Miami</option><option value="Minnesota">Minnesota</option><option value="New England">New England</option><option value="New Orleans">New Orleans</option><option value="NY Jets">NY Jets</option><option value="NY Giants">NY Giants</option><option value="Oakland">Oakland</option><option value="Philadelphia">Philadelphia</option><option value="Pittsburgh">Pittsburgh</option><option value="San Francisco">San Francisco</option><option value="Seattle">Seattle</option><option value="Tampa Bay">Tampa Bay</option><option value="Tennessee">Tennessee</option><option value="Washington">Washington</option></select>
+
+            <br/>
+            
+            <button class="btn btn-link delete-team">Delete Team</button>
           </div>
 
           <div class="user-container">
@@ -91,6 +120,10 @@
             <label for="team-select-4">Keeper</label>
 
             <select id="team-select-4" class="nfl-team__select custom-select" name="nfl-team-dropdown"><option value="none">None</option><option value="Arizona">Arizona</option><option value="Atlanta">Atlanta</option><option value="Baltimore">Baltimore</option><option value="Buffalo">Buffalo</option><option value="Carolina">Carolina</option><option value="Chicago">Chicago</option><option value="Cincinnati">Cincinnati</option><option value="Cleveland">Cleveland</option><option value="Dallas">Dallas</option><option value="Denver">Denver</option><option value="Detroit">Detroit</option><option value="Green Bay">Green Bay</option><option value="Houston">Houston</option><option value="Indianapolis">Indianapolis</option><option value="Jacksonville">Jacksonville</option><option value="Kansas City">Kansas City</option><option value="LA Rams">LA Rams</option><option value="LA Chargers">LA Chargers</option><option value="Miami">Miami</option><option value="Minnesota">Minnesota</option><option value="New England">New England</option><option value="New Orleans">New Orleans</option><option value="NY Jets">NY Jets</option><option value="NY Giants">NY Giants</option><option value="Oakland">Oakland</option><option value="Philadelphia">Philadelphia</option><option value="Pittsburgh">Pittsburgh</option><option value="San Francisco">San Francisco</option><option value="Seattle">Seattle</option><option value="Tampa Bay">Tampa Bay</option><option value="Tennessee">Tennessee</option><option value="Washington">Washington</option></select>
+
+            <br/>
+            
+            <button class="btn btn-link delete-team">Delete Team</button>
           </div>
 
           <div class="user-container">
@@ -103,6 +136,10 @@
             <label for="team-select-5">Keeper</label>
 
             <select id="team-select-5" class="nfl-team__select custom-select" name="nfl-team-dropdown"><option value="none">None</option><option value="Arizona">Arizona</option><option value="Atlanta">Atlanta</option><option value="Baltimore">Baltimore</option><option value="Buffalo">Buffalo</option><option value="Carolina">Carolina</option><option value="Chicago">Chicago</option><option value="Cincinnati">Cincinnati</option><option value="Cleveland">Cleveland</option><option value="Dallas">Dallas</option><option value="Denver">Denver</option><option value="Detroit">Detroit</option><option value="Green Bay">Green Bay</option><option value="Houston">Houston</option><option value="Indianapolis">Indianapolis</option><option value="Jacksonville">Jacksonville</option><option value="Kansas City">Kansas City</option><option value="LA Rams">LA Rams</option><option value="LA Chargers">LA Chargers</option><option value="Miami">Miami</option><option value="Minnesota">Minnesota</option><option value="New England">New England</option><option value="New Orleans">New Orleans</option><option value="NY Jets">NY Jets</option><option value="NY Giants">NY Giants</option><option value="Oakland">Oakland</option><option value="Philadelphia">Philadelphia</option><option value="Pittsburgh">Pittsburgh</option><option value="San Francisco">San Francisco</option><option value="Seattle">Seattle</option><option value="Tampa Bay">Tampa Bay</option><option value="Tennessee">Tennessee</option><option value="Washington">Washington</option></select>
+
+            <br/>
+            
+            <button class="btn btn-link delete-team">Delete Team</button>
           </div>
 
           <div class="user-container">
@@ -115,6 +152,10 @@
             <label for="team-select-6">Keeper</label>
 
             <select id="team-select-6" class="nfl-team__select custom-select" name="nfl-team-dropdown"><option value="none">None</option><option value="Arizona">Arizona</option><option value="Atlanta">Atlanta</option><option value="Baltimore">Baltimore</option><option value="Buffalo">Buffalo</option><option value="Carolina">Carolina</option><option value="Chicago">Chicago</option><option value="Cincinnati">Cincinnati</option><option value="Cleveland">Cleveland</option><option value="Dallas">Dallas</option><option value="Denver">Denver</option><option value="Detroit">Detroit</option><option value="Green Bay">Green Bay</option><option value="Houston">Houston</option><option value="Indianapolis">Indianapolis</option><option value="Jacksonville">Jacksonville</option><option value="Kansas City">Kansas City</option><option value="LA Rams">LA Rams</option><option value="LA Chargers">LA Chargers</option><option value="Miami">Miami</option><option value="Minnesota">Minnesota</option><option value="New England">New England</option><option value="New Orleans">New Orleans</option><option value="NY Jets">NY Jets</option><option value="NY Giants">NY Giants</option><option value="Oakland">Oakland</option><option value="Philadelphia">Philadelphia</option><option value="Pittsburgh">Pittsburgh</option><option value="San Francisco">San Francisco</option><option value="Seattle">Seattle</option><option value="Tampa Bay">Tampa Bay</option><option value="Tennessee">Tennessee</option><option value="Washington">Washington</option></select>
+
+            <br/>
+
+            <button class="btn btn-link delete-team">Delete Team</button>
           </div>
         </div>
       </form>
@@ -140,5 +181,7 @@
     <script src="GenerateTeams.js"></script>
     <script src="RenderTeams.js"></script>
     <script src="ByeWeeks.js"></script>
+    <script src="Validation.js"></script>
+    <script src="OtherFunctions.js"></script>
   </body>
 </html>
