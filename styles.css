@@ -16,6 +16,7 @@ body {
   left: 0;
   z-index: 3;
   width: 100%;
+  border-bottom: 1px solid #ccc;
 }
 
 .navbar-light .navbar-brand , h1 {
@@ -29,9 +30,13 @@ body {
   font-size: 2em;
 }
 
+#landing {
+  margin-top: 70px;
+}
+
 .bye-container {
   display: inline-block;
-  margin: 10px 15px;
+  margin: 10px 0;
   margin-top: 50px;
   padding: 15px 10px;
   border-radius: 5px;
@@ -68,7 +73,8 @@ body {
   min-height: 220px;
   border-radius: 5px;
   color: #333;
-  max-width: 33%;
+  width: 205px;
+  min-width: 33%;
   background: #F8F8F8;
   box-shadow: 0 0 5px -2px rgba(0,0,0,0.50);
 }
@@ -97,26 +103,13 @@ section {
 }
 
 .team-title {
+  color: #50B6BB;
   font-size: 24px;
   font-weight: 500;
 }
 
 .team-tile > ul > li {
   text-align: left;
-}
-
-.keeper-text {
-  font-size: 12px;
-  font-weight: 200;
-  color: #45969B;
-  visibility: hidden;
-}
-
-.keeper-text__show{
-  font-size: 12px;
-  font-weight: 200;
-  color: #45969B;
-  visibility: visible;
 }
 
 .btn-secondary {
@@ -127,6 +120,11 @@ section {
 
 .btn-secondary:hover, .btn-secondary:focus {
   border: 0;
+}
+
+#renderedTeams {
+  width: 100%;
+  height: 100%;
 }
 
 label {
@@ -156,6 +154,7 @@ label {
     border-radius: 5px;
     color: #333;
     max-width: 50%;
+    height: auto;
   }
 }
 
