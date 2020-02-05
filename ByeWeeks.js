@@ -1,5 +1,5 @@
 ByeWeeks = {
-	init: function() {
+  init: function() {
     this.cacheDom();
     this.bindEvents();
     this.displayTeamsOnBye();
@@ -33,7 +33,7 @@ ByeWeeks = {
 
     var today = new Date();
     var weekno = today.getWeek();
-console.log(weekno);
+      console.log(weekno);
     return weekno;
   },
 
